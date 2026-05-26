@@ -2,7 +2,7 @@
 
 This repository hosts the public website for the IRENE-AE9/AP9/SPM radiation belt and space plasma specification models, developed by the Air Force Research Laboratory (AFRL).
 
-**Live site:** https://yourusername.github.io/ae9ap9/
+**Live site:** https://github.com/jiminewlander/VDLMockup
 
 ## Distribution Statement
 
