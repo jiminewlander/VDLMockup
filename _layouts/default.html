@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% if page.title %}{{ page.title }} — {% endif %}{{ site.title }}</title>
+  <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="header-logos">
+        <span class="af-label">AIR FORCE RESEARCH LABORATORY</span>
+      </div>
+      <div class="header-title">
+        <a href="{{ site.baseurl }}/">IRENE-AE9/AP9/SPM</a>
+        <span class="header-subtitle">Radiation Belt &amp; Space Plasma Specification Models</span>
+      </div>
+    </div>
+  </header>
+
+  <div class="layout">
+    <nav class="sidebar">
+      <div class="nav-section-label">AE9/AP9/SPM Contents</div>
+      <ol class="nav-list">
+        <li><a href="{{ site.baseurl }}/">AE9AP9 Home</a></li>
+        <li><a href="{{ site.baseurl }}/pages/news">News</a></li>
+        <li><a href="{{ site.baseurl }}/pages/factsheet">Factsheet</a></li>
+        <li>
+          <a href="{{ site.baseurl }}/pages/quick-reference/">Quick Reference</a>
+          <ol>
+            <li><a href="{{ site.baseurl }}/pages/quick-reference/energy">Energy and spatial coverage</a></li>
+            <li><a href="{{ site.baseurl }}/pages/quick-reference/architecture">Architecture</a></li>
+            <li><a href="{{ site.baseurl }}/pages/quick-reference/datasets">Data sets</a></li>
+            <li><a href="{{ site.baseurl }}/pages/quick-reference/modes">Modes for running the model</a></li>
+            <li><a href="{{ site.baseurl }}/pages/quick-reference/time-sampling">Recommended time sampling</a></li>
+            <li><a href="{{ site.baseurl }}/pages/quick-reference/issues-and-limits">Known issues and limitations</a></li>
+            <li><a href="{{ site.baseurl }}/pages/quick-reference/versions-public">Versions (public releases)</a></li>
+            <li><a href="{{ site.baseurl }}/pages/quick-reference/future">Future version plans</a></li>
+            <li><a href="{{ site.baseurl }}/pages/quick-reference/best-practices">Best Practices</a></li>
+          </ol>
+        </li>
+        <li>
+          <a href="{{ site.baseurl }}/pages/documents">Documents</a>
+          <ol>
+            <li><a href="{{ site.baseurl }}/pages/documents/tech-docs">Technical documentation</a></li>
+            <li><a href="{{ site.baseurl }}/pages/documents/technical-documentation-report">Technical Documentation Report</a></li>
+          </ol>
+        </li>
+        <li>
+          <a href="{{ site.baseurl }}/pages/validations">Validations and evaluations</a>
+          <ol>
+            <li><a href="{{ site.baseurl }}/pages/validations/independent">Independent validations</a></li>
+          </ol>
+        </li>
+        <li><a href="{{ site.baseurl }}/pages/downloads">Downloads</a></li>
+        <li><a href="{{ site.baseurl }}/pages/team">AE9/AP9/SPM Team</a></li>
+        <li>
+          <a href="{{ site.baseurl }}/pages/dsx">DSX</a>
+          <ol>
+            <li><a href="{{ site.baseurl }}/pages/dsx/publications">List of DSX Publications</a></li>
+          </ol>
+        </li>
+      </ol>
+    </nav>
+
+    <main class="content">
+      {{ content }}
+    </main>
+  </div>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <a href="mailto:AFRL.RVBXR.AE9.AP9.Org.Mbx@us.af.mil">Contact Us</a>
+      <span class="sep">|</span>
+      <a href="{{ site.baseurl }}/pages/privacy">Privacy &amp; Security Notice</a>
+      <span class="sep">|</span>
+      <a href="{{ site.baseurl }}/pages/disclaimer">External Link Disclaimer</a>
+      <span class="sep">|</span>
+      <a href="https://www.usa.gov" target="_blank" rel="noopener">USA.gov</a>
+      <span class="sep">|</span>
+      <a href="https://prhome.defense.gov/nofear" target="_blank" rel="noopener">No Fear Act</a>
+    </div>
+    <div class="footer-distro">
+      Distribution Statement A: Approved for public release; distribution unlimited.
+    </div>
+  </footer>
+</body>
+</html>

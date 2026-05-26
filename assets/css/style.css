@@ -1,0 +1,283 @@
+/* ============================================================
+   IRENE-AE9/AP9/SPM GitHub Pages Theme
+   Gov-tech: clean, functional, USAF-appropriate
+   ============================================================ */
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --af-blue:       #003087;
+  --af-blue-mid:   #1a4a8a;
+  --af-blue-light: #e8eef7;
+  --accent:        #c8102e;
+  --text:          #1a1a1a;
+  --text-muted:    #555;
+  --border:        #cdd5e0;
+  --bg:            #f7f8fa;
+  --white:         #ffffff;
+  --sidebar-w:     260px;
+  --font-body:     'Georgia', serif;
+  --font-ui:       'Trebuchet MS', Arial, sans-serif;
+}
+
+body {
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.65;
+  color: var(--text);
+  background: var(--bg);
+}
+
+/* ---- Header ---- */
+.site-header {
+  background: var(--af-blue);
+  color: white;
+  border-bottom: 3px solid var(--accent);
+}
+.header-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 12px 24px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.af-label {
+  font-family: var(--font-ui);
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.7);
+  white-space: nowrap;
+  border-right: 1px solid rgba(255,255,255,0.25);
+  padding-right: 20px;
+}
+.header-title {
+  display: flex;
+  flex-direction: column;
+}
+.header-title a {
+  font-family: var(--font-ui);
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+  letter-spacing: 0.03em;
+}
+.header-title a:hover { text-decoration: underline; }
+.header-subtitle {
+  font-family: var(--font-ui);
+  font-size: 11px;
+  color: rgba(255,255,255,0.75);
+  letter-spacing: 0.04em;
+}
+
+/* ---- Layout ---- */
+.layout {
+  display: flex;
+  max-width: 1200px;
+  margin: 0 auto;
+  min-height: calc(100vh - 120px);
+}
+
+/* ---- Sidebar ---- */
+.sidebar {
+  width: var(--sidebar-w);
+  min-width: var(--sidebar-w);
+  background: var(--white);
+  border-right: 1px solid var(--border);
+  padding: 20px 0;
+  font-family: var(--font-ui);
+  font-size: 13px;
+}
+.nav-section-label {
+  font-size: 10px;
+  font-weight: bold;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  padding: 0 16px 8px;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 8px;
+}
+.nav-list, .nav-list ol {
+  list-style: none;
+  padding: 0;
+}
+.nav-list > li {
+  counter-increment: nav-counter;
+}
+.nav-list a {
+  display: block;
+  padding: 4px 16px;
+  color: var(--af-blue);
+  text-decoration: none;
+  line-height: 1.4;
+}
+.nav-list a:hover {
+  background: var(--af-blue-light);
+  color: var(--af-blue);
+}
+.nav-list ol {
+  margin-left: 12px;
+  border-left: 2px solid var(--af-blue-light);
+  margin-bottom: 4px;
+}
+.nav-list ol a {
+  font-size: 12px;
+  color: var(--text-muted);
+  padding: 3px 12px;
+}
+.nav-list ol a:hover {
+  color: var(--af-blue);
+  background: var(--af-blue-light);
+}
+
+/* ---- Main Content ---- */
+.content {
+  flex: 1;
+  padding: 32px 40px;
+  background: var(--white);
+  min-width: 0;
+}
+
+.content h1 {
+  font-family: var(--font-ui);
+  font-size: 22px;
+  color: var(--af-blue);
+  border-bottom: 2px solid var(--af-blue-light);
+  padding-bottom: 8px;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+.content h2 {
+  font-family: var(--font-ui);
+  font-size: 17px;
+  color: var(--af-blue-mid);
+  margin-top: 28px;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+.content h3 {
+  font-family: var(--font-ui);
+  font-size: 15px;
+  margin-top: 20px;
+  margin-bottom: 6px;
+}
+.content p { margin-bottom: 14px; }
+.content ul, .content ol {
+  margin: 0 0 14px 24px;
+}
+.content li { margin-bottom: 4px; }
+.content a { color: var(--af-blue); }
+.content a:hover { color: var(--accent); }
+.content strong { color: var(--text); }
+
+/* News items */
+.content ul li strong:first-child {
+  color: var(--af-blue);
+}
+
+/* Download box */
+.download-box {
+  background: var(--af-blue-light);
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--af-blue);
+  padding: 20px 24px;
+  margin: 20px 0;
+  border-radius: 2px;
+}
+.download-box h3 {
+  font-family: var(--font-ui);
+  font-size: 15px;
+  color: var(--af-blue);
+  margin-bottom: 10px;
+}
+.btn {
+  display: inline-block;
+  background: var(--af-blue);
+  color: white;
+  font-family: var(--font-ui);
+  font-size: 13px;
+  padding: 8px 18px;
+  text-decoration: none;
+  border-radius: 2px;
+  margin: 4px 6px 4px 0;
+  letter-spacing: 0.02em;
+}
+.btn:hover {
+  background: var(--af-blue-mid);
+  color: white;
+}
+.btn-outline {
+  background: transparent;
+  border: 1px solid var(--af-blue);
+  color: var(--af-blue);
+}
+.btn-outline:hover {
+  background: var(--af-blue);
+  color: white;
+}
+
+/* Distro statement */
+.distro-statement {
+  font-family: var(--font-ui);
+  font-size: 12px;
+  color: var(--text-muted);
+  background: #f0f4f8;
+  border: 1px solid var(--border);
+  padding: 8px 14px;
+  margin-bottom: 20px;
+  border-radius: 2px;
+}
+
+/* Tables */
+.content table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+  margin-bottom: 16px;
+}
+.content th {
+  background: var(--af-blue);
+  color: white;
+  font-family: var(--font-ui);
+  padding: 8px 12px;
+  text-align: left;
+}
+.content td {
+  padding: 7px 12px;
+  border-bottom: 1px solid var(--border);
+}
+.content tr:nth-child(even) td { background: var(--af-blue-light); }
+
+/* ---- Footer ---- */
+.site-footer {
+  background: var(--af-blue);
+  color: rgba(255,255,255,0.8);
+  font-family: var(--font-ui);
+  font-size: 12px;
+  padding: 16px 24px;
+  text-align: center;
+  border-top: 3px solid var(--accent);
+}
+.footer-inner a {
+  color: rgba(255,255,255,0.85);
+  text-decoration: none;
+}
+.footer-inner a:hover { text-decoration: underline; }
+.sep { margin: 0 8px; opacity: 0.4; }
+.footer-distro {
+  margin-top: 6px;
+  opacity: 0.6;
+  font-size: 11px;
+  letter-spacing: 0.04em;
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 768px) {
+  .layout { flex-direction: column; }
+  .sidebar { width: 100%; min-width: unset; border-right: none; border-bottom: 1px solid var(--border); }
+  .content { padding: 20px 16px; }
+  .af-label { display: none; }
+}
